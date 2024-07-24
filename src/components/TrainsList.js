@@ -84,7 +84,7 @@ export default function TrainsList({ trainsList, stationsList, line }) {
     function displayTrains() {
         return (
             <div>
-                {filteredTrains.map(train => <Train train={train} />)}
+                {filteredTrains.map((train, index) => <Train key={index} train={train} />)}
             </div>
         );
     }
